@@ -10,7 +10,7 @@ This page will test disown opener.
 {{ page.description }}
 
 
-<a href="http://xss.docker/popup" target="_blank">Test</a>
+<a href="https://defektive.github.io/xss/popup" target="_blank">Test</a>
 <pre id="asd"></pre>
 <script>
 window.addEventListener("message", function (e) {
@@ -20,6 +20,6 @@ window.addEventListener("message", function (e) {
 }, false);
 
 setInterval(function (){
-  window.postMessage('hello from xss-test', 'http://xss-test.docker')
+  window.postMessage('hello from xss-test', 'https://pwnhub.pw/')
 }, 5000)
 </script>

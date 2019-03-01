@@ -1,4 +1,4 @@
-## [XSS Testing](https://pwnhub.pw/xss/) / SVG
+## [XSS Testing](/xss/) / SVG
 
 
 ### Examples

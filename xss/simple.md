@@ -1,4 +1,4 @@
-## [XSS Testing](https://pwnhub.pw/xss/) / Simple
+## [XSS Testing](/xss/) / Simple
 
 ### Examples
 **If data shows up here after the 1 second delay, that means the JS was executed.**

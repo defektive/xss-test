@@ -1,4 +1,4 @@
-## [CSP Testing](https://pwnhub.pw/csp/)
+## [CSP Testing](/csp/)
 
 - [Test script-src path prefix](/csp/test-path-prefix.html)
 - [Test script-src whole URL](/csp/test-whole-url.html)

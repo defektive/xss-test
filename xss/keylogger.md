@@ -1,4 +1,4 @@
-## [XSS Testing](https://pwnhub.pw/xss/) / Keylogger
+## [XSS Testing](/xss/) / Keylogger
 
 ### Example
 

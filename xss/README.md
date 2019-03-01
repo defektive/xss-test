@@ -1,5 +1,5 @@
-## [XSS Testing](https://pwnhub.pw/xss/)
+## [XSS Testing](/xss/)
 
-- [simple](./simple)
-- [swf](./swf)
-- [keylogger](./keylogger)
+- [simple](/xss/simple)
+- [swf](/xss/swf)
+- [keylogger](/xss/keylogger)

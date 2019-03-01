@@ -1,4 +1,4 @@
-## [XSS Testing](https://pwnhub.pw/xss/) / xss.swf
+## [XSS Testing](/xss/) / xss.swf
 
 ### Requirements
 
