@@ -1,0 +1,12 @@
+
+<!-- Begin CSP? -->
+{% if page.csp_script_src %}
+
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' {{ page.csp_script_src }}">
+
+{% endif %}
+
+{% if page.csp_disown_opener %}
+<meta http-equiv="Content-Security-Policy" content="disown-opener">
+{% endif %}
+<!-- End CSP -->

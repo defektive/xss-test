@@ -1,0 +1,18 @@
+<h2><a href="/csp/">CSP Testing</a> / {{ page.title }}</h2>
+
+These pages include a `whitelist.js` and a `blacklist.js`. Mosts test will attempt to load the whitelist, and block the blacklist. See code reference below to see what is actually being used.
+
+{{ page.description }}
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="script-src 'self' {{ page.csp_script_src }}">
+```
+
+<h3>Results</h3>
+
+<script src="https://defektive.github.io/xss/dist/whitelist.js"></script>
+<script src="https://defektive.github.io/xss/dist/blacklist.js"></script>
+
+
+<script src="/csp/csp-test.js"></script>
