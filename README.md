@@ -4,3 +4,5 @@ All of the samples should be loaded from [defektive.github.io/xss/](https://defe
 {% include_relative xss/README.md %}
 
 {% include_relative csp/README.md %}
+
+{% include_relative click-jacking/README.md %}
