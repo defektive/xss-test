@@ -1,9 +1,10 @@
 <script>
 function botCheck (isBotFn, isNotBotFn) {
+
     let dumbtimeoutRan = false;
     window.setTimeout(function () {
         dumbtimeoutRan = true;
-    }, 10000);
+    }, 1500);
 
     let defaultTimeout = 1200;
     let startTime = new Date().getTime();
