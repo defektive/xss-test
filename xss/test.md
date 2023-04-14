@@ -28,9 +28,9 @@ function botCheck (isBotFn, isNotBotFn) {
             let isBot = false;
 
             if (isBot) {
-                isBotFn.apply(window, data)
+                isBotFn.call(window, data)
             } else {
-                isNotBotFn.apply(window, data)
+                isNotBotFn.call(window, data)
             }
 
         });
