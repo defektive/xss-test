@@ -46,13 +46,13 @@ function botCheck (isBotFn, isNotBotFn) {
 
 function handleBot (data) {
     // only bots should execute this
-    document.write(JSON.stringify(data))
+    document.write(JSON.stringify(data).replace(",",",<br>"))
 }
 
 
 function handleNotBot (data) {
     // Non-bots should execute this. 
-    document.write(JSON.stringify(data))
+    document.write(JSON.stringify(data).replace(",",",<br>"))
 }
 
 botCheck(handleBot, handleNotBot);
