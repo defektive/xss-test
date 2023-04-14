@@ -21,7 +21,7 @@ function botCheck (isBotFn, isNotBotFn) {
                 defaultTimeout: defaultTimeout,
                 dumbtimeoutRan: dumbtimeoutRan,
                 evalString: eval.toString().length,
-                screenOffset: aa.screenX + aa.screenY
+                screenOffset: aa.screenX + aa.screenY,
                 windowwidth: window.screen.width,
                 windowheight: window.screen.height,
                 windowavailWidth: window.screen.availWidth,
