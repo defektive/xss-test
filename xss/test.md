@@ -14,12 +14,6 @@ function botCheck (isBotFn, isNotBotFn) {
 
         // Check notifications
         navigator.permissions.query({name:'notifications'}).then(function(permissionStatus) {
-            // are notifications disabled
-            let notificationsDisabled = ;
-
-            // Does the User-Agent string contain headless?
-            let headlessUA = /;
-
             let data = {
                 notificationsDisabled: Notification.permission === 'denied' && permissionStatus.state === 'prompt' && 1,
                 headlessUA: HeadlessChrome/.test(window.navigator.userAgent),
