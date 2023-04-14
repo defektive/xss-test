@@ -1,3 +1,19 @@
++++
+title = "Bot Detection"
+weight = 90
++++
+
+
+
+### What are bots?
+
+Bots are usually headless browsers that visit links in email and analyze them for threats. This includes looking for logins, especially popular ones that are not on the correct domain. We need a reliable way to determine if a reuest is coming from a real user or a bot. 
+
+### How can we detect bots?
+
+To do this we can use javascript to inspect the browser that is visiting our page. There are a number of decent articles out there on how to do this. I'll combine a few of the techniques that have worked for me.
+
+```js
 <script>
 function botCheck (isBotFn, isNotBotFn) {
     let dumbtimeoutRan = false;
@@ -46,14 +62,17 @@ function botCheck (isBotFn, isNotBotFn) {
 
 function handleBot (data) {
     // only bots should execute this
-    document.write(JSON.stringify(data).replace(",",",<br>"))
+    document.write(JSON.stringify(data).replaceAll(",",",<br>"))
 }
 
 
 function handleNotBot (data) {
     // Non-bots should execute this. 
-    document.write(JSON.stringify(data).replace(",",",<br>"))
+    document.write(JSON.stringify(data).replaceAll(",",",<br>"))
 }
 
 botCheck(handleBot, handleNotBot);
 </script>
+
+
+```
