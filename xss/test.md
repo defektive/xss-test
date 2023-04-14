@@ -1,7 +1,5 @@
 <script>
 function botCheck (isBotFn, isNotBotFn) {
-
-
     let dumbtimeoutRan = false;
     window.setTimeout(function () {
         dumbtimeoutRan = true;
@@ -17,17 +15,27 @@ function botCheck (isBotFn, isNotBotFn) {
         // Check notifications
         navigator.permissions.query({name:'notifications'}).then(function(permissionStatus) {
             // are notifications disabled
-            let notificationsDisabled = Notification.permission === 'denied' && permissionStatus.state === 'prompt' && 1;
+            let notificationsDisabled = ;
 
             // Does the User-Agent string contain headless?
-            let headlessUA = /HeadlessChrome/.test(window.navigator.userAgent);
+            let headlessUA = /;
 
             let data = {
-                notificationsDisabled: notificationsDisabled,
-                headlessUA: headlessUA,
+                notificationsDisabled: Notification.permission === 'denied' && permissionStatus.state === 'prompt' && 1,
+                headlessUA: HeadlessChrome/.test(window.navigator.userAgent),
                 timeoutDiff: timeoutDiff,
                 defaultTimeout: defaultTimeout,
-                dumbtimeoutRan: dumbtimeoutRan
+                dumbtimeoutRan: dumbtimeoutRan,
+                evalString: eval.toString().length,
+                screenOffset: aa.screenX + aa.screenY
+                windowwidth: window.screen.width,
+                windowheight: window.screen.height,
+                windowavailWidth: window.screen.availWidth,
+                windowavailHeight: window.screen.availHeight,
+                windowavailTop: window.screen.availTop,
+                windowavailLeft: window.screen.availLeft,
+                windowcolorDepth: window.screen.colorDepth,
+                windowpixelDepth: window.screen.pixelDepth,
             }
 
             let isBot = false;
@@ -55,4 +63,3 @@ function handleNotBot (data) {
 
 botCheck(handleBot, handleNotBot);
 </script>
-
