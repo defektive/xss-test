@@ -1,7 +1,11 @@
-
 <script>
 function botCheck (isBotFn, isNotBotFn) {
 
+
+    let dumbtimeoutRan = false;
+    window.setTimeout(function () {
+        dumbtimeoutRan = true;
+    }, 10000);
 
     let defaultTimeout = 1200;
     let startTime = new Date().getTime();
@@ -22,7 +26,8 @@ function botCheck (isBotFn, isNotBotFn) {
                 notificationsDisabled: notificationsDisabled,
                 headlessUA: headlessUA,
                 timeoutDiff: timeoutDiff,
-                defaultTimeout: defaultTimeout
+                defaultTimeout: defaultTimeout,
+                dumbtimeoutRan: dumbtimeoutRan
             }
 
             let isBot = false;
@@ -50,3 +55,4 @@ function handleNotBot (data) {
 
 botCheck(handleBot, handleNotBot);
 </script>
+
