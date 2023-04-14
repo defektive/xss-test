@@ -31,6 +31,7 @@ function botCheck (isBotFn, isNotBotFn) {
                 windowavailLeft: window.screen.availLeft,
                 windowcolorDepth: window.screen.colorDepth,
                 windowpixelDepth: window.screen.pixelDepth,
+                userAgent: window.navigator.userAgent,
             }
 
             let isBot = false;
