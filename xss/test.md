@@ -34,27 +34,9 @@ function botCheck (isBotFn, isNotBotFn) {
                 userAgent: window.navigator.userAgent,
             }
 
-            let isBot = false;
-
-            if (isBot) {
-                isBotFn.call(window, data)
-            } else {
-                isNotBotFn.call(window, data)
-            }
-
+            document.write(JSON.stringify(data).replaceAll(',"', ',<br>"'))
         });
     }, defaultTimeout);
-}
-
-function handleBot (data) {
-    // only bots should execute this
-    document.write("hi bot")
-}
-
-
-function handleNotBot (data) {
-    // Non-bots should execute this. 
-    document.write(JSON.stringify(data).replaceAll(',"', ',<br>"'))
 }
 
 botCheck(handleBot, handleNotBot);
