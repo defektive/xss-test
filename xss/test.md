@@ -16,7 +16,7 @@ function botCheck (isBotFn, isNotBotFn) {
         navigator.permissions.query({name:'notifications'}).then(function(permissionStatus) {
             let data = {
                 notificationsDisabled: Notification.permission === 'denied' && permissionStatus.state === 'prompt' && 1,
-                headlessUA: HeadlessChrome/.test(window.navigator.userAgent),
+                headlessUA: /HeadlessChrome/.test(window.navigator.userAgent),
                 timeoutDiff: timeoutDiff,
                 defaultTimeout: defaultTimeout,
                 dumbtimeoutRan: dumbtimeoutRan,
