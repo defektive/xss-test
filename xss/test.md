@@ -1,8 +1,4 @@
-<html>
-<head>
-<title>Quick Test</title>
-</head>
-<body>
+
 <script>
 function botCheck (isBotFn, isNotBotFn) {
 
@@ -54,5 +50,3 @@ function handleNotBot (data) {
 
 botCheck(handleBot, handleNotBot);
 </script>
-</body>
-</html>
