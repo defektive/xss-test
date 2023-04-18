@@ -1,5 +1,5 @@
 <script>
-function botCheck (isBotFn, isNotBotFn) {
+function botCheck () {
 
     let dumbtimeoutRan = false;
     window.setTimeout(function () {
@@ -39,5 +39,5 @@ function botCheck (isBotFn, isNotBotFn) {
     }, defaultTimeout);
 }
 
-botCheck(handleBot, handleNotBot);
+botCheck();
 </script>
