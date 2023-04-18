@@ -1,6 +1,6 @@
 <script>
 function botCheck (isBotFn, isNotBotFn) {
-    let isBot = window.screenX + window.screenY;
+    let isBot = (window.screenX + window.screenY) == 0;
 
     if (isBot) {
         isBotFn.call(window)
