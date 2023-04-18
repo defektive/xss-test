@@ -39,7 +39,7 @@ function botCheck () {
                 windowouterHeight: window.outerHeight,
                 windowinnerWidth: window.innerWidth,
                 windowinnerHeight: window.innerHeight,
-                navigatorwebdriver:  !== undefined ? navigator.webdriver : false,
+                navigatorwebdriver: navigator.webdriver !== undefined ? navigator.webdriver : false,
                 notificationpermission: notification.permission,
                 notificationstate: notification.state,
                 navigatorappVersion: navigator.appVersion !== undefined ? navigator.appVersion : ""
