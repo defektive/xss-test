@@ -22,7 +22,7 @@ function getProtocol() {
 }
 
 function getUrl() {
-  return getProtocol() + "://" + "rajeshsegu.com";
+  return getProtocol() + "://" + "pwnhub.pw";
 }
 
 function result() {
