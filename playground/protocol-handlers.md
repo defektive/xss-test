@@ -7,9 +7,9 @@
 
 
 <!-- Mozilla Only -->
-<iframe id="hiddenIframe" src="about:blank"></iframe>
+<iframe id="hiddenIframe" name="hiddenIframe" src="about:blank"></iframe>
 <!-- IE Case 1 -->
-<a id="hiddenLink" style="display:none;" href="#">custom protocol</a>
+<a id="hiddenLink" style="display:none;" target="hiddenIframe" href="#">custom protocol</a>
 
 
 <script>
