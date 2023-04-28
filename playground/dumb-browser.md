@@ -63,13 +63,20 @@
 <script>
     const dumbFrame = document.getElementById('dumb-frame');
     const dumbForm = document.getElementById('dumb-form');
+
+    function log(what) {
+        document.getElementById('log').value += what + "\n";
+    };
+
+    window.onerror = function (msg, url, line, col, error) {
+        log("Error: " + msg );
+        return true;
+    };
+
     dumbFrame.addEventListener('load', function () {
-        console.log(dumbFrame);
-        document.getElementById('log').value += dumbFrame.src + "\n";
-    });
-    dumbFrame.addEventListener('error', function () {
-        console.log(dumbFrame);
-        document.getElementById('log').value += dumbFrame.src + "\n";
+        log("loaded: "+dumbFrame.src);
+        log("loaded: " + dumbFrame.contentWindow.location);
+
     })
     function handleFormSubmit(e) {
         e.preventDefault();
@@ -113,9 +120,9 @@
 
         try {
             eval('rs = '+ js);
-            document.getElementById('log').value += rs + "\n";
+            log(rs);
         } catch (err) {
-            document.getElementById('log').value += rs + "\n";
+            log(err);
         }
     }
 
