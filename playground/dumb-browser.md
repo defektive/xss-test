@@ -65,7 +65,8 @@
     const dumbForm = document.getElementById('dumb-form');
 
     function log(what) {
-        document.getElementById('log').value += what + "\n";
+        let val = document.getElementById('log').value;
+        document.getElementById('log').value = what + "\n" + val;
     };
 
     window.onerror = function (msg, url, line, col, error) {
