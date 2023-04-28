@@ -52,7 +52,7 @@
 </form>
 <form id="dumb-form" target="dumb-frame"></form>
 
-<iframe id="dumb-frame" name="dumb-frame" style="height: 100%; width: 100%; min-height: 500px;"></iframe>
+<iframe id="dumb-frame" name="dumb-frame" style="height: 100%; width: 100%; min-height: 500px;min-width: 800px;"></iframe>
 <textarea id="log"></textarea>
 <script>
     const dumbFrame = document.getElementById('dumb-frame');
