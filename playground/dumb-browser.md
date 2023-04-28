@@ -14,6 +14,8 @@
         margin: 2px;
     }
 </style>
+
+
 <form onsubmit="handleFormSubmit(event)">
     <label>
         Form Action:
@@ -51,13 +53,21 @@
 
 </form>
 <form id="dumb-form" target="dumb-frame"></form>
-
 <iframe id="dumb-frame" name="dumb-frame" style="height: 100%; width: 100%; min-height: 500px;min-width: 800px;"></iframe>
 <textarea id="log"></textarea>
+<button type="button" onclick="clearLog()">Clear Log</button>
+
+<textarea id="js-console"></textarea>
+<button type="button" onclick="evalJs()">Eval JS</button>
+
 <script>
     const dumbFrame = document.getElementById('dumb-frame');
     const dumbForm = document.getElementById('dumb-form');
     dumbFrame.addEventListener('load', function () {
+        console.log(dumbFrame);
+        document.getElementById('log').value += dumbFrame.src + "\n";
+    });
+    dumbFrame.addEventListener('error', function () {
         console.log(dumbFrame);
         document.getElementById('log').value += dumbFrame.src + "\n";
     })
@@ -95,5 +105,21 @@
 
     function removefield(e){
         e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+    }
+
+    function evalJs() {
+        let js = document.getElementById('js-console').value,
+            rs = null;
+
+        try {
+            eval('rs = '+ js);
+            document.getElementById('log').value += rs + "\n";
+        } catch (err) {
+            document.getElementById('log').value += rs + "\n";
+        }
+    }
+
+    function clearLog() {
+        document.getElementById('log').value = "";
     }
 </script>
