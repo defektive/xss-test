@@ -1,6 +1,7 @@
 <style>
     label, input, textarea {
         display: block;
+        width: 90%;
     }
 
     #field-template {
